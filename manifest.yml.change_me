@@ -1,0 +1,10 @@
+---
+applications:
+- name: totem
+  memory: 512M
+  domain: mybluemix.net
+  instances: 1
+  host: CHANGE_ME
+  path: .
+  env:
+    TWITTER_KEYS: '{"consumer_key":"CHANGE_ME","consumer_secret":"CHANGE_ME","access_token_key":"CHANGE_ME","access_token_secret":"CHANGE_ME"}'
