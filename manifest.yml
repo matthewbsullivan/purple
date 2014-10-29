@@ -1,13 +1,13 @@
 ---
 applications:
-- name: eventure
+- name: purple_eventure
   memory: 512M
   domain: mybluemix.net
   instances: 1
-  host: eventure
+  host: purple_eventure
   path: .
   env:
     TWITTER_KEYS: '{"consumer_key":"lbebQr3fTzIMGgWkvhzbyTsCR",
-    "consumer_secret":"FlWi7F8YPa4LrlqQIsEJP3xbbsQD5RKWgF94LRx6i2b96EcQHq"
+    "consumer_secret":"FlWi7F8YPa4LrlqQIsEJP3xbbsQD5RKWgF94LRx6i2b96EcQHq",
     "access_token_key":"2661873014-D5Vy7OUoqXvXTutUwLTxmgG7YFSK3MpQ98dMjAe",
     "access_token_secret":"a3AtVmtCwFy4wrMHLX7trTPcu9xnibzIp3abmut43ehx8"}'
