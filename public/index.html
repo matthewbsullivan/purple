@@ -13,35 +13,40 @@
     <meta name="title" content="Eventure">
     <style>
       html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
+        height: 85%;
+        margin: 3px;
+        background-color: #99f;
+        padding: 0px;
+      }
+      #list-canvas{
+     	height: 50%;
+        background-color: #ccf;
       }
       #panel {
         position: absolute;
-        top: 5px;
+        top: 9px;
         left: 50%;
         margin-left: -180px;
         z-index: 5;
-        background-color: #ddf;
+        background-color: #ddd ;
         padding: 5px;
-        border: 1px solid #b0f;
+        border: 1px solid #99f;
       }
       #panel-monitor {
         position: absolute;
-        top: 50px;
-        right: 10px;
-        background-color: #ddf;
+        top: 10%;
+        right: 5%;
+        background-color: #ddd;
         padding: 5px;
-        border: 1px solid #b0f;
+        border: 1px solid #99f;
       }
       #titlebar {
        position: absolute;
-       top: 20px;
-       left: 20px;
+       top: 9px;
+       left: 5%;
        padding: 5px;
        background-color: #ddf;
-       border: 1px solid #b0f;
+       border: 1px solid #baf;
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -328,14 +333,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
-  	<div id="titlebar">
-  	<div> Eventure Main Page </div>
-	</div>
     <div id="panel">
       <input id="search" type="search" title="Write a search, click the Search button, and see what's going on on Twitter! Tips: use OR, AND logical operators for multiple-words query">
       <input type="button" value="Search" onclick="startSearch()" title="Click to start searching">
     </div>
     <div id="map-canvas"></div>
+    <div id="titlebar">
+  	<div> Eventure Main Page </div>
+	</div>
     <div id="panel-monitor">
       <div>Tweets on the Map</div>
       <input id="num-tweets" type="text" readonly title="Number of tweets posted to the map"><br>
@@ -346,7 +351,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <div>Tweets/secs</div>
       <input id="tweets-per-sec" type="text" readonly title="Tweets per seconds posted to the map">
       <div>Time elapsed</div>
-      <input id="qtime" type="text" readonly title="Elapsed time since search began">
     </div>
-  </body>
+    <div id="list-canvas">
+		<h3>Twit List</h3>
+		
+	</div>
+    
+</body>
 </html>
