@@ -28,7 +28,7 @@
         left: 50%;
         margin-left: -180px;
         z-index: 5;
-        background-color: #ddd ;
+        background-color: #ddd;
         padding: 5px;
         border: 1px solid #99f;
       }
@@ -75,7 +75,7 @@ function updateStats() {
   document.getElementById('num-tweets-in-error').value = ntweetsinerror;
   document.getElementById('num-tweets-discarded').value = ntweetsdiscarded;
   document.getElementById('tweets-per-sec').value = new Number((ntweets * 1000) / (new Date().getTime() - qtime)).toFixed(2);
-  document.getElementById('elapsed-time').value = (new Date().getTime() - qtime)).toFixed(2);
+//  document.getElementById('elapsed-time').value = (new Date().getTime() - qtime)).toFixed(2);
 }
 
 // Add a delay in writing msgs to the map to mitigate
@@ -335,11 +335,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
+    <div id="map-canvas">
+    </div>
     <div id="panel">
       <input id="search" type="search" title="Write a search, click the Search button, and see what's going on on Twitter! Tips: use OR, AND logical operators for multiple-words query">
       <input type="button" value="Search" onclick="startSearch()" title="Click to start searching">
     </div>
-    <div id="map-canvas"></div>
+
     <div id="titlebar">
   	<div> Eventure Main Page </div>
 	</div>
@@ -352,8 +354,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <input id="num-tweets-discarded" type="text" readonly title="Number of tweets discarded because of errors with the Geocoder service (query limit)"><br>
       <div>Tweets/secs</div>
       <input id="tweets-per-sec" type="text" readonly title="Tweets per seconds posted to the map">
-      <div>Time elapsed</div>
-      <input id="elapsed-time" type="text" readonly title="Tweets per seconds posted to the map">
     </div>
     <div id="list-canvas">
 		<h3>Twit List</h3>
