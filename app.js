@@ -49,7 +49,7 @@ if ('development' === app.get('env')) {
 }
 
 var server = http.createServer(app).listen(app.get('port'), function() {
-  console.log('TOTEM server listening on port ' + app.get('port'));
+  console.log('Eventure server listening on port ' + app.get('port'));
 });
 
 // Create the WebSocket endpoint that does the job
