@@ -1,10 +1,10 @@
 ---
 applications:
-- name: purple_eventure
+- name: eventure
   memory: 512M
   domain: mybluemix.net
   instances: 1
-  host: purple_eventure
+  host: eventure
   path: .
   env:
     TWITTER_KEYS: '{"consumer_key":"lbebQr3fTzIMGgWkvhzbyTsCR",
