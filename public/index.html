@@ -3,13 +3,14 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Tweets On ThE Map</title>
+    <title>Eventure</title>
     <meta name="description" content="A web application hosted on IBM Bluemix
-    that can monitor on a Google Map the results of a twitter query.
-    The application uses WebSocket protocol, which is supported by IBM Bluemix PaaS.">
-    <meta name="keywords" content="bluemix,twitter,tweets,websocket,developerWorks">
-    <meta name="author" content="Michele Crudele">
-    <meta name="title" content="Tweets On ThE Map">
+    that searches a twitter feed for keywords indicating events and displays 
+    results on a map and in a list view. Based on an application (Tweets On ThE Map) 
+    written by Michelle Cruedele.">
+    <meta name="keywords" content="bluemix,twitter,tweets,websocket,eventure">
+    <meta name="author" content="Team Purple">
+    <meta name="title" content="Eventure">
     <style>
       html, body, #map-canvas {
         height: 100%;
@@ -22,17 +23,25 @@
         left: 50%;
         margin-left: -180px;
         z-index: 5;
-        background-color: #fff;
+        background-color: #ddf;
         padding: 5px;
-        border: 1px solid #999;
+        border: 1px solid #b0f;
       }
       #panel-monitor {
         position: absolute;
         top: 50px;
         right: 10px;
-        background-color: #fff;
+        background-color: #ddf;
         padding: 5px;
-        border: 1px solid #999;
+        border: 1px solid #b0f;
+      }
+      #titlebar {
+       position: absolute;
+       top: 20px;
+       left: 20px;
+       padding: 5px;
+       background-color: #ddf;
+       border: 1px solid #b0f;
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -80,8 +89,8 @@ function initialize() {
   // Create the map and initialize the geocoder.
 
   var mapOptions = {
-    zoom: 2,
-    center: new google.maps.LatLng(37.09024, 0),
+    zoom: 7,
+    center: new google.maps.LatLng(30.049834, -97.135901),
     mapTypeId: google.maps.MapTypeId.TERRAIN
   };
 
@@ -99,7 +108,7 @@ function dropACircle(loc, tweet) {
         strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: '#FF0000',
+        fillColor: '#F00000',
         fillOpacity: 0.35,
         map: map,
         center: geoLatLong,
@@ -319,6 +328,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
   <body>
+  	<div id="titlebar">
+  	<div> Eventure Main Page </div>
+	</div>
     <div id="panel">
       <input id="search" type="search" title="Write a search, click the Search button, and see what's going on on Twitter! Tips: use OR, AND logical operators for multiple-words query">
       <input type="button" value="Search" onclick="startSearch()" title="Click to start searching">
@@ -333,6 +345,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <input id="num-tweets-discarded" type="text" readonly title="Number of tweets discarded because of errors with the Geocoder service (query limit)"><br>
       <div>Tweets/secs</div>
       <input id="tweets-per-sec" type="text" readonly title="Tweets per seconds posted to the map">
+      <div>Time elapsed</div>
+      <input id="qtime" type="text" readonly title="Elapsed time since search began">
     </div>
   </body>
 </html>

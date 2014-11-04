@@ -5,3 +5,5 @@ launchConfigurations/
 .project
 .settings/
 manifest.yml
+routes/
+views/
