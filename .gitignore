@@ -4,6 +4,3 @@ launchConfigurations/
 .jshintrc
 .project
 .settings/
-manifest.yml
-routes/
-views/
