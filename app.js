@@ -11,7 +11,11 @@ var express = require('express')
 // Get the Twitter access keys from
 // the environment variable TWITTER_KEYS
 //
-var TwitterKeys = {};
+var TwitterKeys = 
+    {"consumer_key":"lbebQr3fTzIMGgWkvhzbyTsCR",
+    "consumer_secret":"FlWi7F8YPa4LrlqQIsEJP3xbbsQD5RKWgF94LRx6i2b96EcQHq",
+    "access_token_key":"2661873014-D5Vy7OUoqXvXTutUwLTxmgG7YFSK3MpQ98dMjAe",
+    "access_token_secret":"a3AtVmtCwFy4wrMHLX7trTPcu9xnibzIp3abmut43ehx8"};
 
 if ( process.env.TWITTER_KEYS ) {
   console.log('Got TWITTER_KEYS');
