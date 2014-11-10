@@ -1,4 +1,4 @@
-# Tweets On ThE Map (Totem)
+# Eventure
 
 Totem is a web application using *WebSockets*, *Twitter Search*, and *Google Maps* API
 to show in real-time the *world of tweets* on a Google map.  
