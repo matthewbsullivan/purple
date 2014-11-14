@@ -51,6 +51,12 @@
        background-color: #ddf;
        border: 1px solid #baf;
       }
+      #about-button {
+       position: relative;
+       top: 3px;
+       right: 3px;
+       padding: 2px;
+      }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
@@ -340,6 +346,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div id="panel">
         <div id="titlebar">
   	<div> Eventure Main Page </div>
+	<div id="about-button"> <a href="about.html"> About Us </a></div>
 	</div>
       <input id="search" type="search" title="Write a search, click the Search button, and see what's going on on Twitter! Tips: use OR, AND logical operators for multiple-words query">
       <input type="button" value="Search" onclick="startSearch()" title="Click to start searching">
