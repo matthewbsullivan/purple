@@ -109,68 +109,7 @@ function initialize() {
     streetViewControl: false,
   };
 
-  var styles = [
-  {
-    "elementType": "geometry",
-    "stylers": [
-      { "saturation": -58 },
-      { "lightness": -30 }
-    ]
-  },{
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [
-      { "hue": "#f600ff" }
-    ]
-  },{
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [
-      { "hue": "#f600ff" }
-    ]
-  },{
-    "featureType": "landscape",
-    "elementType": "geometry",
-    "stylers": [
-      { "saturation": 1 },
-      { "hue": "#b300ff" }
-    ]
-  },{
-    "featureType": "administrative",
-    "elementType": "geometry",
-    "stylers": [
-      { "hue": "#8800ff" }
-    ]
-  },{
-    "featureType": "poi.attraction",
-    "elementType": "geometry",
-    "stylers": [
-      { "color": "#96528b" }
-    ]
-  },{
-  },{
-    "elementType": "labels.text.fill",
-    "stylers": [
-      { "color": "#43063a" }
-    ]
-  },{
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      { "lightness": -26 }
-    ]
-  },{
-    "elementType": "labels.icon",
-    "stylers": [
-      { "hue": "#ff6e00" }
-    ]
-  },{
-  }
-]
-
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-  mapOptions);
-
-  map.setOptions({styles: styles});
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   geocoder = new google.maps.Geocoder();
 }
