@@ -79,13 +79,6 @@
 			title="Click to reset search">
 	</div>
     <div id="map-canvas" style="width: 50%; height: 50%"></div>
-	<input id="search" type="search"
-		title="Write a search, click the Search button, and
-			see what's going on on Twitter! Tips: use OR,
-			AND logical operators for multiple-words
-			query">
-        <input type="button" value="Search" onclick="startSearch()"
-		title="Click to start searching">
 	<div id="panel-monitor" align="center">
       <div>Tweets on the Map</div>
       <input id="num-tweets" type="text" readonly title="Number of tweets posted to the map"><br>
@@ -101,14 +94,19 @@
 			<tbody>
 				<tr>
 					<td style="width:50%">
-					<!-- <form action="user_requested.asp">
-		City: <input type="text" name="city"><br>
-		<br> Neighborhood: <input type="text" name="neighborhood"><br>
-		<br> Event Type: <input type="text" name="eventType"><br>
-		<br> Venue Type: <input type="text" name="venue"><br>
-		<br> Number of Results: <input type="text" name="numberresults"><br>
-		<br> <input type="submit" value="Submit">
-	</form> -->
+			Twitter Tag: 
+			<select name="twitterSelect" id="search" onchange="startSearch()">
+				<option value="nocover">#NoCover</option>
+				<option value="livemusic">#LiveMusic</option>
+				<option value="turnup">#TurnUp</option>
+			</select>
+			
+		<!-- <input id="search" type="search"
+		title="Write a search, click the Search button, and
+			see what's going on on Twitter! Tips: use OR,
+			AND logical operators for multiple-words
+			query">
+		<input type="button" value="Search" onclick="startSearch()" title="Click to start searching"> -->
 					</td>
 					<td style="width:50%">
 					<h3>Twitter List</h3>
