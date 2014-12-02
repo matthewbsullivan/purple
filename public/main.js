@@ -153,7 +153,7 @@ function dropACircle(loc, tweet) {
   // Add animation effect: bounce a tweet on the circle
   var marker = new google.maps.Marker({
     position: geoLatLong,
-    icon: 'twitter.png',
+    icon: 'eventure.png',
     animation: google.maps.Animation.BOUNCE
   });
 
